@@ -2,6 +2,7 @@ package draw
 
 import (
 	"fmt"
+	"os"
 
 	rl "github.com/gen2brain/raylib-go/raylib"
 )
@@ -60,6 +61,10 @@ func update() {
 		rl.ImageFlipVertical(image)
 		rl.ImageColorInvert(image)    // Invert color
 		rl.ImageResize(image, 28, 28) // Resize image to size corresponding to MNIST dataset
+		// Check if images directory exists, create one if not
+		if _, err := os.Stat("/images"); os.IsNotExist(err) {
+			os.Mkdir("images", os.ModePerm)
+		}
 		rl.ExportImage(*image, "images/image.png")
 		rl.UnloadImage(image)
 
