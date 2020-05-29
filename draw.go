@@ -37,11 +37,6 @@ func Run() {
 	rl.CloseWindow()
 }
 
-// UpdateDigit updates
-func UpdateDigit(digit int) {
-	RecognizedDigit = digit
-}
-
 func initialize() {
 	rl.InitWindow(windowWidth, windowHeight, "GoDraw")
 	rl.SetTargetFPS(120)
