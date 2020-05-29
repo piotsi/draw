@@ -2,4 +2,4 @@ module github.com/piotsik/draw
 
 go 1.14
 
-require github.com/gen2brain/raylib-go v0.0.0-20200504172450-13ca6365b524
+require github.com/gen2brain/raylib-go v0.0.0-20200528082952-e0f56b22753f
